@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="h2 text-center">
+        @@title
+    </div>
+    <div class="work-slider slider">
+        <div class="slider__wrap">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        @@include('../cards/_work-card.html',{
+                        "img":"work",
+                        "title":"Коррекция морщин под глазами",
+                        "desc":"Пример коррекции глубоких горизонтальных мимических морщин под глазами с помощью инъекций ботулотоксина Ксеомин. Эффект через 3 месяца после процедуры.",
+                        "video":"true",
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        @@include('../cards/_work-card.html',{
+                        "img":"work2",
+                        "title":"Контурная пластика губ",
+                        "desc":"Пример контурной пластики губ с применением филлеров на основе гиалуроновой кислоты от французской компании Stylage Lips",
+                        "video":"",
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        @@include('../cards/_work-card.html',{
+                        "img":"work2",
+                        "title":"Контурная пластика губ",
+                        "desc":"Пример контурной пластики губ с применением филлеров на основе гиалуроновой кислоты от французской компании Stylage Lips",
+                        "video":"",
+                        })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        @@include('../ui/_swiper-nav.html')
+    </div>
+    <div class="works__nav">
+        <a href="#" class="m-btn m-btn--small m-btn-brown-outline">
+            <span>Посмотреть все</span>
+        </a>
+    </div>
+</div>

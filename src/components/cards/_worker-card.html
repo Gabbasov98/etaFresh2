@@ -1,0 +1,13 @@
+<div class="worker-card" @@if(img == 'worker'){ data-modal="workerModal"} @@if(img !== 'worker'){ data-modal="workerModal2"}>
+    <div class="worker-card__img m-backdrop">
+        <img srcset="img/@@img_2x.jpg 2x" src="img/@@img.jpg" loading="lazy"/>
+    </div>
+    <div class="worker-card__content">
+        <div class="worker-card__title text20 bold-text dark-gray-text">
+            @@title
+        </div>
+        <div class="worker-card__desc text16 medium-text">
+            @@desc
+        </div>
+    </div>
+</div>

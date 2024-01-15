@@ -1,0 +1,71 @@
+<div class="modal__inner">
+    <div class="modal__top">
+        <div class="modal__title">
+            Оставить отзыв
+        </div>
+        <div class="modal__desc">
+            Поделитесь своими впечатлениями
+        </div>
+    </div>
+
+    <form action="" class="modal-form">
+        <fieldset class="fg _full">
+            <input type="text" class="_required">
+            <label>Имя и Фамилия</label>
+        </fieldset>
+        <fieldset class="fg">
+            <input type="tel" class="_error">
+            <label>Телефон</label>
+            <div class="fg__text">
+                Проверьте телефон
+            </div>
+        </fieldset>
+        <fieldset class="fg">
+            <input type="text" class="_required _success">
+            <label>Почта</label>
+        </fieldset>
+        <fieldset class="fg">
+            <input type="text">
+            <label>Понравилось</label>
+        </fieldset>
+        <fieldset class="fg">
+            <input type="text">
+            <label>Не понравилось</label>
+        </fieldset>
+        <fieldset class="fg _full">
+            <textarea class="_required"></textarea>
+            <label>Ваши впечатления</label>
+        </fieldset>
+        <div class="file-input _full">
+            <div class="file-input__wrap">
+                <div class="custom-file-container" data-upload-id="file-input"></div>
+            </div>
+        </div>
+
+        <div class="modal-form__bottom _full">
+            <button class="m-btn m-btn-brown">
+                <span>Оставить отзыв</span>
+            </button>
+            <div class="modal-form__conf">
+                Отправляя свои данные, вы даёте согласие на <a href="">обработку персональных данных</a>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="thank">
+    <div class="thank__inner">
+        <div class="thank__icon"></div>
+        <div class="thank__title">
+            Спасибо!
+        </div>
+        <div class="thank__desc">
+            Отзыв будет размещен после проверки модератором
+        </div>
+    </div>
+</div>
+<button class="modal__close _close-modal">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.5 4.5L19.5 19.5" stroke="#58585D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M19.5 4.5L4.5 19.5" stroke="#58585D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</button>

@@ -1,0 +1,291 @@
+<div class="modal worker-modal" id="workerModal">
+    <div class="modal__bg _close-modal"></div>
+    <div class="modal__dialog">
+        <div class="worker-modal__grid">
+            <div class="worker-modal__col1">
+                <div class="worker-sidebar">
+                    <div class="worker-sidebar__img">
+                        <img srcset="img/worker7_2x.jpg 2x" src="img/worker7.jpg" loading="lazy"/>
+                    </div>
+                    <button class="worker-sidebar__btn m-btn m-btn-brown-outline">
+                        <span>Записаться на прием</span>
+                    </button>
+                </div>
+            </div>
+            <div class="worker-modal__col2">
+                <div class="worker-modal__info">
+                    <div class="worker-modal__name">
+                        Троцкая Валентина
+                    </div>
+                    <div class="worker-modal__prof">
+                        Стилист
+                    </div>
+                </div>
+                <div class="worker-modal__text">
+                    Ассистент кафедры пластической и реконструктивной хирургии, косметологии и регенеративной медицины. Научные работы по терапии зудящих дерматозов у лиц пожилого и старческого возраста. Постоянно участвует в профильных конференциях и симпозиумах.
+                </div>
+
+                <div class="certificates">
+                    <div class="text23 semi-bold-text">
+                        Сертификаты и награды
+                    </div>
+                    <div class="certificates-slider slider">
+                        <div class="slider__wrap">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        @@include('cards/_certificate-card.html',{
+                                        "img":"certificate",
+                                        })
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include('cards/_certificate-card.html',{
+                                        "img":"certificate2",
+                                        })
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include('cards/_certificate-card.html',{
+                                        "img":"certificate5",
+                                        })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="modal__close _close-modal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.5 4.5L19.5 19.5" stroke="#58585D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19.5 4.5L4.5 19.5" stroke="#58585D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </div>
+</div>
+
+<div class="modal worker-modal" id="workerModal2">
+    <div class="modal__bg _close-modal"></div>
+    <div class="modal__dialog">
+        <div class="worker-modal__grid">
+            <div class="worker-modal__col1">
+                <div class="worker-sidebar">
+                    <div class="worker-sidebar__img">
+                        <img srcset="img/worker8_2x.jpg 2x" src="img/worker8.jpg" loading="lazy"/>
+                    </div>
+                    <button class="worker-sidebar__btn m-btn m-btn-brown-outline">
+                        <span>Записаться на прием</span>
+                    </button>
+                </div>
+            </div>
+            <div class="worker-modal__col2">
+                <div class="worker-modal__info">
+                    <div class="worker-modal__name">
+                        Скибина Елена
+                    </div>
+                    <div class="worker-modal__items">
+                        <div class="worker-modal__prof">
+                            Врач-косметолог
+                        </div>
+                        <div class="worker-modal__prof">
+                            Стаж: 22 года
+                        </div>
+                    </div>
+                </div>
+                <div class="worker-modal__text">
+                    Активный участник международных конференций по косметологии. Регулярно проходит сертификационное обучение по новым методам лечения. Является действительным членом Национальное общество мезотерапии.
+                </div>
+
+                <div class="worker-info">
+                    <div class="info-card">
+                        <div class="info-card__show">
+                            <div class="info-card__title">
+                                Образование
+                            </div>
+                            <button class="info-card__btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 3V21" stroke="#AD4E2C" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M3 12L21 12" stroke="#AD4E2C" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="info-card__hidden">
+                            <div class="edu">
+                                @@include('cards/_edu-item.html',{
+                                "year":"1999",
+                                "title":'Окончила Тверскую Государственную Медицинскую Академию (сейчас ТГМУ). Присвоена квалификация – Врач по специальности «Лечебное дело».',
+                                })
+                                @@include('cards/_edu-item.html',{
+                                "year":"2000",
+                                "title":'Окончила интернатуру по терапии.',
+                                })
+                                @@include('cards/_edu-item.html',{
+                                "year":"2002",
+                                "title":'Окончила ординатуру по клинической фармакологии и работала в больнице скорой помощи, а также в детской областной больнице города Твери в качестве фармаколога.',
+                                })
+                                @@include('cards/_edu-item.html',{
+                                "year":"2007",
+                                "title":'Окончила году окончила клиническую ординатуру по дерматовенерологии.',
+                                })
+                                @@include('cards/_edu-item.html',{
+                                "year":"2004 2018",
+                                "title":'Являлась ведущим специалистом Западного подразделения фармацевтической компании Никомед (Такеда) в России, г. Тверь. За время работы в данной компании был накоплен колоссальный опыт в области фармакологии, доказательной медицины и организации госпитального бизнеса.',
+                                })
+                                @@include('cards/_edu-item.html',{
+                                "year":"2018 2019",
+                                "title":'Одна из ведущих практикующих врачей-косметологов города Твери. В своей практике применяет все современные механические, химические, инъекционные и аппаратные методы омоложения. Работает в связке с врачами других специализация: пластические хирурги, челюстно-лицевые хирурги, флебологи, эндокринологи и другие.',
+                                })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card__show">
+                            <div class="info-card__title">
+                                Дополнительное образование
+                            </div>
+                            <button class="info-card__btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 3V21" stroke="#AD4E2C" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M3 12L21 12" stroke="#AD4E2C" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="info-card__hidden">
+                            <div class="text _list2">
+                                <ul>
+                                    <li>Базовый курс по методам APTOS.</li>
+                                    <li>Lips by Dr.Bogdasarova.</li>
+                                    <li>Дессекционный курс для косметологов, Skin Technology.</li>
+                                    <li>Средние и поверхностные пилиниги в эстетической косметологии.</li>
+                                    <li>Экспертное применение ботулинотерапии в косметологии.</li>
+                                    <li>Контурная пластика.</li>
+                                    <li>Уход за кожей в зимний период, лаборатория GiGi Cosmetic.</li>
+                                    <li>Применение препарата Radiesse (Merz) в области эстетической дерматологии.</li>
+                                    <li>Мезотерапия в терапевтической косметологии и эстетической медицине. Удостоверение о квалификации.</li>
+                                    <li>Современные методы лечения в эстетической медицине. Удостоверение о квалификации.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card__show">
+                            <div class="info-card__title">
+                                Специализации
+                            </div>
+                            <button class="info-card__btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 3V21" stroke="#AD4E2C" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M3 12L21 12" stroke="#AD4E2C" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="info-card__hidden">
+                            <div class="text _list2">
+                                <ul>
+                                    <li>Контурная пластика лица в полном объеме.</li>
+                                    <li>Удаление пигментных пятен и веснушек.</li>
+                                    <li>Лечение «рыхлости» и нездорового состояния кожи.</li>
+                                    <li>Лечение сосудистых звездочек и розацеа.</li>
+                                    <li>Удаление шрамов, рубцов и неровностей кожи.</li>
+                                    <li>Лечение последствий угревой сыпи и акне.</li>
+                                    <li>Удаление родинок и бородавок.</li>
+                                    <li>Коррекция складок, морщины в области лица, шеи и зоны декольте.</li>
+                                    <li>Биоревитализация лица.</li>
+                                    <li>Косметическая ботулинотерапия.</li>
+                                    <li>Инъекционная терапия лица и тела.</li>
+                                    <li>Лазерный, химический и механический пилинг.</li>
+                                    <li>Подтяжка лица с помощью нитей APTOS (совместно с пластическим хирургом).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificates">
+                    <div class="text23 semi-bold-text">
+                        Сертификаты и награды
+                    </div>
+                    <div class="certificates-slider slider">
+                        <div class="slider__wrap">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        @@include('cards/_certificate-card.html',{
+                                        "img":"certificate",
+                                        })
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include('cards/_certificate-card.html',{
+                                        "img":"certificate2",
+                                        })
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include('cards/_certificate-card.html',{
+                                        "img":"certificate3",
+                                        })
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include('cards/_certificate-card.html',{
+                                        "img":"certificate4",
+                                        })
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include('cards/_certificate-card.html',{
+                                        "img":"certificate5",
+                                        })
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include('cards/_certificate-card.html',{
+                                        "img":"certificate",
+                                        })
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include('cards/_certificate-card.html',{
+                                        "img":"certificate2",
+                                        })
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include('cards/_certificate-card.html',{
+                                        "img":"certificate3",
+                                        })
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include('cards/_certificate-card.html',{
+                                        "img":"certificate4",
+                                        })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="modal__close _close-modal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.5 4.5L19.5 19.5" stroke="#58585D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19.5 4.5L4.5 19.5" stroke="#58585D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </div>
+</div>
+
+<div class="modal" id="reviewModal">
+    <div class="modal__bg _close-modal"></div>
+    <div class="modal__dialog">
+        @@include('ui/_review-modal.html')
+    </div>
+</div>
+
+<div class="modal" id="reviewModal2">
+    <div class="modal__bg _close-modal"></div>
+    <div class="modal__dialog _success">
+        @@include('ui/_review-modal.html')
+    </div>
+</div>
+
+

@@ -1,0 +1,186 @@
+.h1,
+.h2{
+  font-weight: 700;
+  font-family: $font2;
+  text-transform: uppercase;
+}
+
+.h1{
+  font-size: 4em;
+  line-height: 112.5%;
+  color: $darkGray;
+}
+
+.h2{
+  font-size: 2.5em;
+  line-height: 140%;
+}
+
+.text48{
+  font-size: 3em;
+}
+
+.text24{
+  font-size: 1.5em;
+  line-height: 133%;
+}
+
+.text23{
+  font-size: 1.375em;
+  line-height: 145%;
+}
+
+.text20{
+  font-size: 1.25em;
+  line-height: 160%;
+}
+
+.text19{
+  font-size: 1.1875em;
+  line-height: 120%;
+}
+
+.text18{
+  font-size: 1.125em;
+  line-height: 133%;
+}
+
+.text17{
+  font-size: 1.0625em;
+  line-height: 120%;
+}
+
+.text16{
+  font-size: 1em;
+  line-height: 150%;
+}
+
+.text15{
+  font-size: .9375em;
+  line-height: 120%;
+}
+
+.text14{
+  font-size: .875em;
+  line-height: 172%;
+}
+
+.text13{
+  font-size: .8125em;
+  line-height: 120%;
+}
+
+.text12{
+  font-size: .75em;
+  line-height: 120%;
+}
+
+.text11{
+  font-size: .6875em;
+  line-height: 120%;
+}
+
+.text10{
+  font-size: .625em;
+  line-height: 120%;
+}
+
+.extra-bold-text{
+  font-weight: 800;
+}
+
+.bold-text{
+  font-weight: 700;
+}
+
+.semi-bold-text{
+  font-weight: 600;
+}
+
+.medium-text{
+  font-weight: 500;
+}
+
+.regular-text{
+  font-weight: 400;
+}
+
+.light-text{
+  font-weight: 300;
+}
+
+.dark-gray-text{
+  color: $darkGray;
+}
+
+.secondary-text{
+  color: $textSecondary;
+}
+
+.text-center{
+  text-align: center;
+}
+
+
+@media screen and (max-width: 992px){
+  .h1{
+    font-size: 1.75em;
+    line-height: 115%;
+  }
+
+  .h2{
+    font-size: 1.5em;
+    line-height: 133%;
+  }
+
+  .text48{
+    font-size: 1.5em;
+    line-height: 133%;
+  }
+
+  .text20-tablet{
+    font-size: 1.25em;
+  }
+
+  .text19-tablet{
+    font-size: 1.1875em;
+  }
+
+  .text18-tablet{
+    font-size: 1.125em;
+  }
+
+  .text17-tablet{
+    font-size: 1.0625em;
+  }
+
+  .text16-tablet{
+    font-size: 1em;
+    line-height: 150%;
+  }
+
+  .text15-tablet{
+    font-size: .9375em;
+  }
+
+  .text14-tablet{
+    font-size: .875em;
+  }
+
+  .text13-tablet{
+    font-size: .8125em;
+  }
+
+  .text12-tablet{
+    font-size: .75em;
+  }
+
+  .text11-tablet{
+    font-size: .6875em;
+  }
+
+  .text10-tablet{
+    font-size: .625em;
+  }
+
+}

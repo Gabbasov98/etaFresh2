@@ -1,0 +1,119 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Главная", "description":"", "keywords":"",})
+
+<body class="m-page">
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html',{
+            "main":"true",
+            })
+        </header>
+        <main class="content">
+
+            <div class="main">
+                <div class="container">
+                    <div class="main-slider slider">
+                        <div class="slider__wrap">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    @@include('components/cards/_main-slide.html')
+                                    @@include('components/cards/_main-slide.html')
+                                    @@include('components/cards/_main-slide.html')
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        @@include('components/ui/_swiper-nav.html')
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-collection">
+                <div class="container">
+                    <div class="services-slider slider">
+                        <div class="slider__wrap">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        @@include('components/cards/_service-card.html',{
+                                        "img":"service",
+                                        "title":"Аппаратная  косметология",
+                                        })
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include('components/cards/_service-card.html',{
+                                        "img":"service-2",
+                                        "title":"Инъекционная  косметология",
+                                        })
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include('components/cards/_service-card.html',{
+                                        "img":"service-3",
+                                        "title":"Уход за телом",
+                                        })
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include('components/cards/_service-card.html',{
+                                        "img":"service-4",
+                                        "title":"Уход за лицом",
+                                        })
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include('components/cards/_service-card.html',{
+                                        "img":"service-5",
+                                        "title":"Парикмахерские<br> услуги ",
+                                        })
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include('components/cards/_service-card.html',{
+                                        "img":"service-6",
+                                        "title":"Маникюр <br>и педикюр",
+                                        })
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include('components/cards/_service-card.html',{
+                                        "img":"service-7",
+                                        "title":"SPA-процедуры",
+                                        })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @@include('components/ui/_swiper-nav.html')
+                    </div>
+                </div>
+            </div>
+
+            <div class="advantages">
+                @@include('components/page-blocks/_advantages.html')
+            </div>
+
+            <div class="works works-index">
+                @@include('components/page-blocks/_works.html',{
+                "title":"Результаты нашей работы",
+                })
+            </div>
+
+            <div class="workers">
+                @@include('components/page-blocks/_workers.html')
+            </div>
+
+            <div class="reviews">
+                @@include('components/page-blocks/_reviews.html')
+            </div>
+
+            <div class="blog">
+                @@include('components/page-blocks/_blog.html',{
+                "title":"Блог"
+                })
+            </div>
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

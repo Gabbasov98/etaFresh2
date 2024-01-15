@@ -1,0 +1,345 @@
+.worker-modal{
+  .modal__dialog{
+    width: 80.75em;
+    padding: 3em 3.625em;
+  }
+  .modal__close{
+    top: 2em;
+    right: 2em;
+  }
+  &__grid{
+    display: grid;
+    grid-template-columns: 28em calc(100% - 32em);
+    gap: 4em;
+  }
+  &__info{
+    @include grid100gap(.5em);
+    margin-bottom: 1.625em;
+  }
+  &__name{
+    font-size: 2.5em;
+    line-height: 140%;
+    font-weight: 700;
+  }
+  &__prof{
+    font-size: 1.5em;
+    line-height: 133%;
+    font-weight: 500;
+  }
+  &__text{
+    font-size: 1.125em;
+    line-height: 177%;
+    max-width: 30.11em;
+  }
+  &__items{
+    display: flex;
+    align-items: center;
+    .worker-modal__prof{
+      margin-right: 1.33em;
+    }
+  }
+}
+
+.worker-sidebar{
+  position: sticky;
+  top: 0;
+  &__img{
+    @include imgCover(139.3%);
+    border-radius: .75em;
+  }
+  &__btn{
+    position: absolute;
+    bottom: 1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-weight: 600;
+    span{
+      font-size: 1em;
+    }
+  }
+}
+
+.certificates{
+  margin-top: 2.625em;
+  &__more{
+    font-size: 1em;
+    line-height: 125%;
+    font-weight: 500;
+    color: #A85F45;
+    margin-top: 1em;
+    &:hover{
+      color: $primaryHover;
+    }
+  }
+}
+
+.certificates-slider{
+  @media screen and (min-width: 993px){
+    margin-top: .125em;
+    .swiper{
+      &-wrapper{
+        transform: unset !important;
+        flex-wrap: wrap;
+      }
+      &-slide{
+        width: auto !important;
+        padding: 0;
+        margin: 1em 1em 0 0;
+      }
+      &-pagination{
+        display: none;
+      }
+    }
+    &._many-cards{
+      &:not(._show-all){
+        .swiper-slide:nth-child(4)~.swiper-slide{
+          display: none;
+        }
+      }
+      &._show-all{
+        .certificates__more{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.certificate-card{
+  height: 5.75em;
+  display: block;
+  &__img{
+    height: 100%;
+    display: block;
+    img{
+      width: auto;
+      height: 100%;
+      display: block;
+    }
+  }
+}
+
+.worker-info{
+  @include grid100gap(.5em);
+  margin-top: 1.81em;
+}
+
+.info-card{
+  background-color: $lightBg;
+  border-radius: 0.75em;
+  &._active{
+    .info-card__btn{
+      transform: rotate(45deg);
+    }
+  }
+  &__show{
+    padding: 1em 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .3s;
+    color: $darkGray;
+    &:hover{
+      cursor: pointer;
+      color: $primary;
+    }
+  }
+  &__title{
+    font-size: 1.125em;
+    line-height: 177%;
+    font-weight: 600;
+  }
+  &__btn{
+    width: 1.5em;
+    @include center;
+    svg{
+      width: 100%;
+    }
+  }
+  &__hidden{
+    padding: 0 1.5em 1em;
+    display: none;
+  }
+}
+
+.edu{
+  @include grid100gap(1em);
+  max-width: 37em;
+  &__item{
+    display: grid;
+    grid-template-columns: 2.375em calc(100% - 3.375em);
+    gap: 1em;
+  }
+  &__year,
+  &__text{
+    font-size: 1em;
+    line-height: 150%;
+  }
+  &__year{
+    font-weight: 700;
+    color: $primary;
+    text-align: right;
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .workers-grid{
+    .worker-card{
+      br{
+        display: none;
+      }
+    }
+  }
+
+  .works-grid{
+    grid-template-columns: repeat(2,calc(50% - .25em));
+    gap: 2em .5em;
+  }
+
+  .worker-modal{
+    .modal{
+      &__dialog{
+        padding: 0;
+      }
+      &__close{
+        top: .81em;
+        right: .81em;
+      }
+    }
+    &__grid{
+      display: block;
+    }
+    &__col1{
+      padding: 2.5em 1em 1.31em;
+      background-color: $lightBg;
+    }
+    &__col2{
+      padding: 2em 1em;
+    }
+    &__info{
+      text-align: center;
+      gap: .25em;
+      margin: 1em 0 0;
+    }
+    &__name{
+      font-size: 1.5em;
+      line-height: 150%;
+    }
+    &__prof{
+      font-size: 1.125em;
+    }
+    &__text{
+      font-size: 1em;
+      line-height: 150%;
+    }
+    &__items{
+      justify-content: center;
+      .worker-modal__prof{
+        margin: 0 .44em;
+      }
+    }
+  }
+
+  .worker-sidebar{
+    position: relative;
+    top: unset;
+    width: 15.8125em;
+    margin: 0 auto;
+    &__img{
+      border-radius: .625em;
+    }
+    &__btn{
+      height: 2.5em;
+      padding: 0 1.25em;
+      bottom: 1em;
+      span{
+        font-size: .875em;
+      }
+    }
+  }
+
+  .certificates{
+    margin-top: 2.125em;
+  }
+
+  .certificates-slider{
+    margin-top: .875em;
+    .swiper{
+      &-slide{
+        width: auto;
+        padding-right: .75em;
+      }
+    }
+  }
+
+  .certificate-card{
+    height: 4.625em;
+    img{
+      border-radius: 0.375em;
+    }
+  }
+
+  .info-card{
+    border-radius: .625em;
+    &__show{
+      padding: .875em 1em;
+    }
+    &__title{
+      font-size: 1em;
+      line-height: 150%;
+    }
+    &__btn{
+      width: 1.25em;
+    }
+    &__hidden{
+      padding: 0 1em 1em;
+    }
+    .text{
+      &._list2{
+        ul{
+          gap: .75em;
+          li{
+            font-size: .875em;
+            line-height: 171%;
+          }
+        }
+      }
+    }
+  }
+
+  .edu{
+    &__item{
+      grid-template-columns: 2.125em calc(100% - 2.75em);
+      gap: .625em;
+    }
+    &__year,
+    &__text{
+      font-size: .875em;
+      line-height: 171%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px){
+  .workers-grid{
+    gap: .5em;
+    grid-template-columns: repeat(2,calc(50% - .25em));
+    .worker-card{
+      &__title{
+        font-size: 1em;
+      }
+      &__desc{
+        font-size: .8125em;
+        line-height: 123%;
+        margin-top: .45em;
+      }
+    }
+  }
+
+  .works-grid{
+    grid-template-columns: 100%;
+  }
+}

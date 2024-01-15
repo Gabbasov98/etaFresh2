@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="h2 text-center">
+        @@title
+    </div>
+
+    <div class="blog-slider slider">
+        <div class="slider__wrap">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        @@include('../cards/_blog-card.html',{
+                        "img":"blog",
+                        "title":"Филлеры: что это такое и кому это нужно?",
+                        "desc":"Термин «филлеры» у многих людей вызывает перед глазами картинку раздутых губ и выпуклых...",
+                        "date":"5 июля 2023 ",
+                        "type":"Статьи",
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        @@include('../cards/_blog-card.html',{
+                        "img":"blog2",
+                        "title":"Парабены в косметике: что это такое",
+                        "desc":"Вред парабенов в составе косметики — недоказанная гипотеза, которая порождает массу споров и точек...",
+                        "date":"1 июля 2023 ",
+                        "type":"Новости",
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        @@include('../cards/_blog-card.html',{
+                        "img":"blog3",
+                        "title":"Отвоевать несколько лет молодости возможно!",
+                        "desc":"Красота — понятие субъективное. Кому-то нравятся худышки, кому-то девушки более пышные.",
+                        "date":"24 июня 2023 ",
+                        "type":"Статьи",
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        @@include('../cards/_blog-card.html',{
+                        "img":"blog4",
+                        "title":"Частный случай «Выравнивание блонда»",
+                        "desc":"Большинство наших постоянных клиенток и приходящих впервые комфортно себя чувствуют в блонде.",
+                        "date":"15 мая 2023 ",
+                        "type":"Статьи",
+                        })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        @@include('../ui/_swiper-nav.html')
+    </div>
+</div>

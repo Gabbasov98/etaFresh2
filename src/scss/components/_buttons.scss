@@ -1,0 +1,82 @@
+@import "../vars";
+.m-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-out .225s;
+    padding: 0 2em;
+    height: 3.5em;
+    border-radius: 6.25em;
+    font-weight: 500;
+    span{
+        font-size: 1.125em;
+        line-height: 133%;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+    &--small{
+        height: 3em;
+        padding: 0 1.5em;
+        span{
+            font-size: 1em;
+        }
+    }
+}
+
+.m-btn-gray{
+    background-color: rgba(#F0EFEA,.5);
+    color: $black;
+    &:hover{
+        background-color: $primaryHover;
+        color: #fff;
+    }
+}
+
+.m-btn-brown{
+    background-color: $primary;
+    color: #fff;
+    &:hover{
+        background-color: $primaryHover;
+        color: #fff;
+    }
+}
+
+.m-btn-white{
+    background-color: #fff;
+    border: 2px solid #fff;
+    color: $black;
+    &:hover{
+        border-color: $primary;
+        color: $primary;
+    }
+}
+
+.m-btn-brown-outline{
+    background-color: #fff;
+    color: $primary;
+    border: 1px solid $primary;
+    &:hover{
+        background-color: $primary;
+        color: #fff;
+    }
+}
+
+
+
+@media screen and (max-width: 992px){
+    .m-btn{
+        height: 3em;
+        padding: 0 1.5em;
+        span{
+            font-size: 1em;
+        }
+        &--small{
+            height: 2.5em;
+            padding: 0 1.25em;
+            span{
+                font-size: .875em;
+            }
+        }
+    }
+}

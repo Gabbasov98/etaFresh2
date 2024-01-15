@@ -1,0 +1,228 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Отзывы клиентов", "description":"", "keywords":"",})
+
+<body class="m-page">
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html',{
+            "main":"",
+            })
+        </header>
+        <main class="content">
+
+            <div class="page-top">
+                <div class="container">
+                    <ul class="breadcrumbs">
+                       <li><a href="/">Главная</a></li>
+                       <li><span>Отзывы клиентов</span></li>
+                    </ul>
+                    <h1 class="h1">
+                        Отзывы клиентов
+                    </h1>
+                </div>
+            </div>
+
+            <div class="reviews-page">
+                <div class="container">
+                    <div class="reviews-page__grid">
+                        <div class="reviews-page__col">
+                            <div class="reviews-page__items">
+                                <div class="review-card">
+                                    @@include('components/cards/_review-card-top.html',{
+                                    "name":"Светлана",
+                                    "date":"15.08.2023",
+                                    })
+                                    <div class="review-card__content">
+                                        <p>Посетила клинику впервые, по рекомендации подруги и не пожалела! Очень вежливый персонал, встретили, предложили каких только можно вкусностей во время ожидания) атмосфера классная, вокруг красота, приятно находиться. Делала инъекции ботулотоксина в лоб и межбровку у косметолога Скибиной Елены Анатольевны. До этого опыт таких инъекций был, но у другого специалиста. Но после посещения Елены, я поняла, что вернусь именно к ней. Ощущения совсем другие, можно сказать безболезненно, несмотря на многочисленное количество уколов. И Елена разъвеяла многие мифы о постинъекционном периоде…оказывается все намного проще и легче, чем я делала раньше. Уже на 3 день я вижу результат! И буду с удовольствием носить свой новый, красивый и гладкий лобик!) спасибо Вам за красоту!!!</p>
+                                    </div>
+                                    <div class="review-card__bottom">
+                                        <div class="review-card__media">
+                                            <a href="img/review-img_2x.jpg" data-fancybox class="review-card__img">
+                                                <img srcset="img/review-img_2x.jpg 2x" src="img/review-img.jpg" loading="lazy"/>
+                                            </a>
+                                        </div>
+                                        <div class="review-card__media">
+                                            <a href="img/review-img2_2x.jpg" data-fancybox class="review-card__img">
+                                                <img srcset="img/review-img2_2x.jpg 2x" src="img/review-img2.jpg" loading="lazy"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-card">
+                                    @@include('components/cards/_review-card-top.html',{
+                                    "name":"Елизавета",
+                                    "date":"04.03.2023",
+                                    })
+                                    <div class="review-card__content">
+                                        <p>Обожаю эту клинику! В кабинетах и на ресепшене чисто. Персонал приветливый и всегда готов помочь. Очень часто проходят разные акции и скидки для клиентов и их знакомых. Альбина Колосова прекрасный мастер и грамотный специалист. Хожу к ней на лазерную эпиляцию уже пол года. Ответит на любой вопрос в рамках своей сферы. Ходить к ней на сеансы одно удовольствие :)</p>
+                                    </div>
+                                    <div class="review-card__bottom">
+                                        <div class="review-card__doc">
+                                            <a href="img/doc_2x.jpg" data-fancybox class="review-card__img">
+                                                <img srcset="img/doc_2x.jpg 2x" src="img/doc.jpg" loading="lazy"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-card">
+                                    @@include('components/cards/_review-card-top.html',{
+                                    "name":"Пациент +7-999-91XXXXX",
+                                    "date":"15.08.2023",
+                                    })
+                                    <div class="review-card__content">
+                                        <p>
+                                            <b>Понравилось:</b> Очень хороший доктор. Без врачебного высокомерия. Терпеливая к вопросам, готовая тебя понять.
+                                        </p>
+                                        <p>
+                                            <b>Не понравилось:</b> Всё хорошо. Разве, что не всегда можно попасть на прием в вечернее время.
+                                        </p>
+                                        <p>
+                                            Была в клинике впервые на лазерной депиляции. Первыми в глаза бросились: красивый интерьер и вежливые администраторы. Оборудование дорогое и качественное. Очень приятная система скидок. Есть возможность онлайн-записи. Специалист Альбина Колосова успокоила, всё объяснила и провела быстро и качественно процедуру. Обязательно прийду вновь!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="review-card">
+                                    @@include('components/cards/_review-card-top.html',{
+                                    "name":"Олеся",
+                                    "date":"11.08.2023",
+                                    })
+                                    <div class="review-card__content">
+                                        <p>
+                                            <b>Понравилось:</b>  Широкий спектр услуг. Аппараты последнего поколения. Очень хорошая атмосфера в клинике, вежливый и заботливый персонал.
+                                        </p>
+                                        <p>
+                                            Лучшая косметологическая клиника в городе! Такого выбора аппаратной косметологии больше не знаю в городе.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="review-card">
+                                    @@include('components/cards/_review-card-top.html',{
+                                    "name":"Светлана",
+                                    "date":"9.08.2023",
+                                    })
+                                    <div class="review-card__content">
+                                        <p>
+                                            Обожаю эту клинику! В кабинетах и на ресепшене чисто. Персонал приветливый и всегда готов помочь. Очень часто проходят разные акции и скидки для клиентов и их знакомых. Альбина Колосова прекрасный мастер и грамотный специалист. Хожу к ней на лазерную эпиляцию уже пол года. Ответит на любой вопрос в рамках своей сферы. Ходить к ней на сеансы одно удовольствие :)
+                                        </p>
+                                    </div>
+                                    <div class="review-card__bottom">
+                                        <div class="review-card__video">
+                                            <div class="video">
+                                                <a href="videos/Countdown7.mp4" data-fancybox class="video__img">
+                                                    <img srcset="img/video2_2x.jpg 2x" src="img/video2.jpg" loading="lazy"/>
+                                                </a>
+                                                <div class="video-nav">
+                                                    <button class="video-nav__play">
+                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M2 12V0L12 6L2 12Z" fill="#AD4E2C"/>
+                                                        </svg>
+                                                    </button>
+                                                    <div class="video-nav__time text13 medium-text">
+                                                        00:09
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-card">
+                                    @@include('components/cards/_review-card-top.html',{
+                                    "name":"Виктория",
+                                    "date":"22.07.2023",
+                                    })
+                                    <div class="review-card__content">
+                                        <p>
+                                            Клиника очень хорошая. Специалисты на высшем уровне. Очень большой выбор процедур, приятные администраторы, все подробно рассказали и провели экскурсию по клинике. Отдельное спасибо косметологу Колосовой Альбине)
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="review-card">
+                                    @@include('components/cards/_review-card-top.html',{
+                                    "name":"Светлана",
+                                    "date":"9.08.2023",
+                                    })
+                                    <div class="review-card__content">
+                                        <p>
+                                            В клинике была первый раз, очень понравилось все с самого начала, при входе встречают приветливые девушки, предлагают чай, кофе, в холле уютная обстановка. Я делала уход за чувствительный кожей лица, врач дал рекомендации по уходу и необходимым процедурам. По прошлому опыту, обычно в клиниках навязывают лишние ненужные процедуры, тут просто дают советы, никто ничего не впаривает. Рекомендую однозначно.
+                                        </p>
+                                    </div>
+                                    <div class="review-card__bottom">
+                                        <div class="review-card__video _small">
+                                            <div class="video">
+                                                <a href="videos/Countdown7.mp4" data-fancybox class="video__img">
+                                                    <img srcset="img/video3_2x.jpg 2x" src="img/video3.jpg" loading="lazy"/>
+                                                </a>
+                                                <div class="video-nav">
+                                                    <button class="video-nav__play">
+                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M2 12V0L12 6L2 12Z" fill="#AD4E2C"/>
+                                                        </svg>
+                                                    </button>
+                                                    <div class="video-nav__time text13 medium-text">
+                                                        00:09
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-card">
+                                    @@include('components/cards/_review-card-top.html',{
+                                    "name":"Олеся",
+                                    "date":"11.08.2023",
+                                    })
+                                    <div class="review-card__content">
+                                        <p>
+                                            <b>Понравилось:</b>  Широкий спектр услуг. Аппараты последнего поколения. Очень хорошая атмосфера в клинике, вежливый и заботливый персонал.
+                                        </p>
+                                        <p>
+                                            Лучшая косметологическая клиника в городе! Такого выбора аппаратной косметологии больше не знаю в городе.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            @@include('components/ui/_pagination.html')
+                        </div>
+                        <div class="reviews-page__col">
+                            <div class="reviews-sidebar">
+                                <div class="new-review">
+                                    <div class="new-review__title text24 semi-bold-text">
+                                        Были на приеме? <br>  Поделитесь впечатлениями
+                                    </div>
+                                    <div class="new-review__nav">
+                                        <button data-modal="reviewModal" class="m-btn m-btn-brown">
+                                            <span>Оставить отзыв</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="reviews-sites2">
+                                    @@include('components/cards/_site-item.html',{
+                                    "img":"site",
+                                    "num":"4.9",
+                                    })
+                                    @@include('components/cards/_site-item.html',{
+                                    "img":"site2",
+                                    "num":"4.9",
+                                    })
+                                    @@include('components/cards/_site-item.html',{
+                                    "img":"site3",
+                                    "num":"5",
+                                    })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

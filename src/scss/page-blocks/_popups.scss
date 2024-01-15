@@ -1,0 +1,223 @@
+.modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: calc(100 * var(--vh));
+    z-index: 80;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s;
+    &__bg {
+        background: rgba($black, .7);
+        position: fixed;
+        width: 100%;
+        height: calc(100 * var(--vh));
+        top: 0;
+        left: 0;
+        display: none;
+        z-index: 2;
+    }
+    &._active {
+        opacity: 1;
+        pointer-events: unset;
+        .modal__bg {
+            display: block;
+        }
+    }
+}
+
+.modal {
+    overflow-y: auto;
+    padding: 2em 0;
+    text-align: center;
+    @media screen and (min-width: 993px){
+
+    }
+    &:after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+    &__dialog{
+        text-align: left;
+        vertical-align: middle;
+    }
+    &__dialog {
+        background: #fff;
+        width: 37.5em;
+        max-width: calc(100% - 1.875em);
+        position: relative;
+        z-index: 3;
+        padding: 4em 4em 2.75em;
+        display: inline-block;
+        border-radius: .75em;
+        &._success{
+            .thank{
+                opacity: 1;
+                pointer-events: unset;
+            }
+            .modal__inner{
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+    }
+    &__close {
+        z-index: 10;
+        border-top: 0;
+        background-color: transparent;
+        width: 1.5em;
+        @include center;
+        position: absolute;
+        top: 1.5em;
+        right: 1.5em;
+        &:hover{
+            path{
+                opacity: 1;
+            }
+        }
+        svg {
+            width: 100%;
+            height: auto;
+        }
+        &:hover{
+            path{
+                stroke: $primary;
+            }
+        }
+    }
+    &__top{
+        text-align: center;
+        @include grid100gap(.44em);
+        margin-bottom: 1.38em;
+    }
+    &__title{
+        font-size: 2em;
+        line-height: 125%;
+        font-weight: 600;
+        color: $darkGray;
+    }
+    &__desc{
+        font-size: 1.25em;
+        line-height: 160%;
+    }
+    &__inner{
+        //opacity: 0;
+        //pointer-events: none;
+    }
+}
+
+.modal-form{
+    display: grid;
+    grid-template-columns: repeat(2,calc(50% - .5em));
+    gap: 1em;
+    &__bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1em auto 0;
+        width: 16.25em;
+        max-width: 100%;
+        text-align: center;
+    }
+    &__conf{
+        font-size: .75em;
+        line-height: 133%;
+        color: $gray;
+        margin-top: 1em;
+        a{
+            color: $primary;
+        }
+    }
+}
+
+._full{
+    grid-column: 1/-1;
+}
+
+.thank{
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include center;
+    flex-direction: column;
+    text-align: center;
+    &__inner{
+        width: 20em;
+        max-width: 100%;
+    }
+    &__icon{
+        width: 3em;
+        height: 3em;
+        background-color: #F5F1ED;
+        background-image: url(../img/check.svg);
+        @include bgImgSize(1.5em);
+        border-radius: 50%;
+        margin: 0 auto 1em;
+    }
+    &__title{
+        font-size: 1.75em;
+        line-height: 114%;
+        font-weight: 600;
+        color: $darkGray;
+    }
+    &__desc{
+        font-size: 1.125em;
+        line-height: 177%;
+        margin-top: .125em;
+    }
+}
+
+
+@media screen and (max-width: 992px){
+    .modal{
+        padding: 0;
+        &:after{
+            display: none;
+        }
+        &__dialog{
+            max-width: 100%;
+            border-radius: 0;
+            min-height: $vh;
+            padding: 2.31em 1em 2.19em;
+        }
+        &__close{
+            top: .81em;
+            right: .81em;
+        }
+        &__top{
+            gap: .125em;
+            margin-bottom: 1.31em;
+        }
+        &__title{
+            font-size: 1.625em;
+        }
+        &__desc{
+            font-size: 1.125em;
+        }
+    }
+
+    .modal-form{
+        grid-template-columns: 100%;
+        gap: .5em;
+    }
+
+    .thank{
+        &__icon{
+            width: 2.5em;
+            height: 2.5em;
+            background-size: 1.25em auto;
+        }
+        &__title{
+            font-size: 1.625em;
+            line-height: 154%;
+        }
+    }
+}

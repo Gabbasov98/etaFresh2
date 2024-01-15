@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="workers__top text-center">
+        <div class="h2">
+            Профессионалы
+        </div>
+        <div class="text20 text16-tablet">
+            Лучшие специалисты, которые регулярно совершенствуют свои навыки, проходят повышения квалификации и посещают международные конференции.
+        </div>
+    </div>
+
+    <div class="worker-slider slider _loop">
+        <div class="slider__wrap">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        @@include('../cards/_worker-card.html',{
+                        "img":"worker",
+                        "title":"Троцкая Валентина",
+                        "desc":"Стилист",
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        @@include('../cards/_worker-card.html',{
+                        "img":"worker2",
+                        "title":"Евгений Успенский",
+                        "desc":"Топ-стилист",
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        @@include('../cards/_worker-card.html',{
+                        "img":"worker3",
+                        "title":"Левина Лариса",
+                        "desc":"Мастер маникюра, педикюра <br> и эпиляции",
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        @@include('../cards/_worker-card.html',{
+                        "img":"worker4",
+                        "title":"Морозова Юлия",
+                        "desc":"Топ-мастер, визажист",
+                        })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        @@include('../ui/_swiper-nav.html')
+    </div>
+</div>

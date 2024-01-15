@@ -1,0 +1,554 @@
+.workers{
+  margin-top: 5.06em;
+  &__top{
+    @include grid100gap(.5em);
+    width: 54.5em;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.worker-slider{
+  margin-top: 1.94em;
+  .slider__wrap{
+    padding-top: 1em;
+  }
+  .swiper{
+    &-slide{
+      width: 25%;
+    }
+    &-button{
+      top: 12.25em;
+    }
+  }
+}
+
+.worker-card{
+  border-radius: .75em;
+  background: #F6F5F2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all .3s;
+  &:hover{
+    @media screen and (min-width: 993px){
+      transform: translateY(-.5em);
+    }
+  }
+  &__img{
+    @include imgCover(109%);
+    border-radius: .75em .75em 0 0;
+    &:after{
+      background: rgba(#F1E9E0,.1);
+    }
+  }
+  &__content{
+    flex-grow: 1;
+    padding: 1.06em 1.5em;
+  }
+  &__title{
+    color: $primary;
+  }
+  &__desc{
+    margin-top: -.125em;
+  }
+}
+
+.advantages{
+  margin-top: 5.31em;
+}
+
+.advantage-card{
+  max-width: 13.5em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  &__icon{
+    height: 5em;
+    img{
+      height: 100%;
+      display: block;
+    }
+  }
+  &__text{
+    margin-top: .375em;
+    @include grid100gap(.3125em);
+  }
+}
+
+.reviews{
+  margin-top: 5.06em;
+}
+
+.reviews-sites{
+  margin-top: 1.33em;
+  @include center;
+}
+
+.site-item{
+  display: flex;
+  align-items: center;
+  @include lastM(0 3.6em 0 0);
+  &__img{
+    img{
+      max-width: 11.3125em;
+      max-height: 2.125em;
+    }
+  }
+  &__img,
+  &__rating {
+    display: flex;
+    align-items: center;
+  }
+  &__rating{
+    margin-left: .57em;
+    img{
+      margin-right: .25em;
+      width: 1.1875em;
+    }
+  }
+}
+
+.reviews-slider{
+  margin-top: 2.5em;
+  .swiper{
+    &-slide{
+      width: calc(100% / 3);
+    }
+    &-button{
+      margin-top: -1.4375em;
+    }
+  }
+}
+
+.review-card{
+  padding: 1.94em 2.19em 2.31em 2.375em;
+  height: 100%;
+  border-radius: 0.75em;
+  background-color: $lightBg;
+  display: flex;
+  flex-direction: column;
+  &__top{
+    display: flex;
+    align-items: center;
+  }
+  &__name{
+    margin-right: .875em;
+  }
+  &__content{
+    margin-top: 1em;
+    flex-grow: 1;
+    p{
+      font-size: 1em;
+      line-height: 150%;
+      @include lastM(0 0 1em);
+    }
+    a{
+      font-weight: 500;
+      color: $link;
+      &:hover{
+        color: $primary;
+      }
+    }
+  }
+  &__bottom{
+    width: calc(100% + .5em);
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1em;
+  }
+  &__media{
+    width: 4.6875em;
+    margin: .5em .5em 0 0;
+  }
+  &__img{
+    display: block;
+    @include imgCover(100%);
+    border-radius: .375em
+  }
+  &__doc{
+    margin: .5em .5em 0 0;
+    width: auto;
+    height: 4.6875em;
+    .review-card__img{
+      padding: 0;
+      height: 100%;
+      img{
+        position: static;
+      }
+    }
+  }
+  &__video{
+    margin: .5em .5em 0 0;
+    width: 22.375em;
+    max-width: 100%;
+    &._small{
+      width: 8.625em;
+    }
+    .video{
+      &__img{
+        border-radius: .625em;
+      }
+    }
+    .video-nav{
+      padding-right: .75em;
+      bottom: .75em;
+      &__play{
+        width: 1.5em;
+        height: 1.5em;
+        margin-right: .375em;
+        svg{
+          width: .5625em;
+        }
+      }
+    }
+  }
+}
+
+.about-service{
+  margin-top: 6em;
+  padding: 5.06em 0 6em;
+  background-color: $lightBg;
+  &__inner{
+    padding: 2.69em 4.5em 3em;
+    border-radius: 0.75em;
+    background-color: #fff;
+    width: 57.5em;
+    max-width: 100%;
+    margin: 1.94em auto 0;
+  }
+  .tab-content{
+    margin-top: 1.94em;
+  }
+}
+
+.tabs{
+  display: flex;
+}
+
+.tab{
+  @include lastM(0 2em 0 0);
+  font-weight: 600;
+  color: $darkGray;
+  transition: all .3s;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    bottom: .19em;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $primary;
+    transition: inherit;
+    opacity: 0;
+  }
+  span{
+    font-size: 1.25em;
+    line-height: 160%;
+  }
+  &:hover{
+    cursor: pointer;
+    color: $primaryHover;
+  }
+  &._active{
+    color: $primary;
+    &:before{
+      opacity: 1;
+    }
+  }
+}
+
+.tab-content{
+  display: none;
+  &._active{
+    display: block;
+  }
+}
+
+.text{
+  p,ul{
+    @include lastM(0 0 1em);
+  }
+  li,
+  p{
+    font-size: 1em;
+    line-height: 150%;
+  }
+  ul{
+    @include grid100gap(1em);
+    li{
+      position: relative;
+      padding-left: 2.5em;
+      &:before{
+        content: '';
+        position: absolute;
+        height: 1.5em;
+        width: 1.5em;
+        border-radius: 50%;
+        background-color: $lightBg;
+        background-image: url(../img/check.svg);
+        @include bgImgSize(.75em);
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .workers{
+    overflow: hidden;
+    margin-top: 2.56em;
+    &__top{
+      gap: 1.44em;
+    }
+  }
+
+  .worker-slider{
+    margin-top: .5em;
+    .swiper{
+      &-slide{
+        width: 16em;
+      }
+    }
+  }
+
+  .worker-card{
+    border-radius: .625em;
+    &__img{
+      border-radius: .625em .625em 0 0;
+    }
+    &__content{
+      padding: .94em 1em;
+    }
+    &__title{
+      font-size: 1.125em;
+      line-height: 133%;
+    }
+    &__desc{
+      font-size: .875em;
+      line-height: 171%;
+      margin-right: .1em;
+    }
+  }
+
+  .advantages{
+    margin-top: 2.5em;
+    &__grid{
+      row-gap: 1.5em;
+    }
+  }
+
+  .advantage-card{
+    max-width: unset;
+    &__icon{
+      height: 4em;
+    }
+    &__text{
+      margin-top: .5em;
+      gap: 0;
+    }
+    &__title{
+      font-size: .9375em;
+      line-height: 160%;
+    }
+    &__desc{
+      font-size: .8125em;
+      line-height: 184%;
+    }
+  }
+
+  .reviews{
+    margin-top: 2.5em;
+  }
+
+  .reviews-sites{
+    margin-top: 1em;
+  }
+
+  .site-item{
+    @include lastM(0 1em 0 0);
+    flex-direction: column;
+    max-width: 6.5em;
+    &__img{
+      height: 2.5em;
+      img{
+        max-height: 1.25em;
+        max-width: 100%;
+      }
+    }
+    &__rating{
+      margin: 0;
+      img{
+        width: 1em;
+      }
+    }
+  }
+
+  .reviews-slider{
+    margin-top: 1em;
+    .swiper{
+      &-slide{
+        width: 50%;
+      }
+    }
+  }
+
+  .review-card{
+    border-radius: .625em;
+    padding: 1.5em 1em;
+    &__name{
+      font-size: .875em;
+      line-height: 172%;
+    }
+    &__date{
+      font-size: .75em;
+      line-height: 170%;
+    }
+    &__content{
+      margin-top: .5em;
+      p{
+        font-size: .875em;
+        line-height: 171%;
+      }
+    }
+    &__bottom{
+      padding-top: .5em;
+    }
+    &__media{
+      width: 4em;
+    }
+    &__doc{
+      height: 4em;
+    }
+    &__video{
+      &._small{
+        width: 6.5em;
+      }
+      .video-nav{
+        bottom: .5em;
+      }
+      .video__img{
+        border-radius: 0.5em;
+      }
+    }
+  }
+
+  .about-service{
+    margin-top: 2.5em;
+    padding: 2.06em 0 2.5em;
+    &__inner{
+      padding: 1.5em 1em;
+      border-radius: 0.625em;
+      margin-top: 1.44em;
+    }
+    .tab-content{
+      margin-top: 1em;
+    }
+  }
+
+  .tabs{
+    overflow-x: auto;
+    &__wrap{
+      position: relative;
+      width: calc(100% + 2em);
+      padding: 0 1em;
+      margin-left: -1em;
+      &:after{
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1.4375em;
+        height: 2.375em;
+        background: linear-gradient(270deg, #F7F7F4 30.43%, rgba(247, 247, 244, 0.00) 100%);
+      }
+    }
+
+  }
+
+  .tab{
+    @include lastM(0 1.25em 0 0);
+    &:before{
+      bottom: .1em;
+    }
+    span{
+      font-size: 1em;
+      line-height: 150%;
+    }
+    &:hover{
+      cursor: pointer;
+      color: $primaryHover;
+    }
+    &._active{
+      color: $primary;
+      &:before{
+        opacity: 1;
+      }
+    }
+  }
+
+  .tab-content{
+    display: none;
+    &._active{
+      display: block;
+    }
+  }
+
+  .text{
+    p,ul{
+      @include lastM(0 0 1.14em);
+    }
+    li,
+    p{
+      font-size: .875em;
+      line-height: 171%;
+    }
+    ul{
+      li{
+        padding-left: 2.14em;
+        &:before{
+          top: .125em;
+          height: 1.43em;
+          width: 1.43em;
+          background-size: .625em auto;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px){
+  .worker-slider{
+    margin-left: auto;
+    margin-right: auto;
+    width: 15.5em;
+    .slider__wrap{
+      overflow: unset;
+    }
+  }
+
+  .reviews-sites{
+    display: grid;
+    grid-template-columns: repeat(3,calc(100% / 3 - 2em / 3));
+    gap: 1em;
+  }
+
+  .site-item{
+    margin: 0 !important;
+  }
+
+  .reviews-slider{
+    .swiper{
+      &-slide{
+        width: 100%;
+      }
+    }
+  }
+}

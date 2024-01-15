@@ -1,0 +1,129 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head2.html',{ "lang":"ru", "title":"Контакты", "description":"", "keywords":"",})
+
+<body class="m-page">
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html',{
+            "main":"",
+            })
+        </header>
+        <main class="content">
+
+            <div class="page-top">
+                <div class="container">
+                    <ul class="breadcrumbs">
+                       <li><a href="/">Главная</a></li>
+                       <li><span>Контакты</span></li>
+                    </ul>
+                    <h1 class="h1">
+                        Контакты
+                    </h1>
+                </div>
+            </div>
+
+            <div class="contacts">
+                <div class="container">
+                    <div class="contacts__inner">
+                        <div class="contacts__content">
+                            <div class="contacts__street">
+                                г. Тверь, ул. Скворцова-Степанова, д. 15
+                            </div>
+                            <div class="contacts__info">
+                                <div class="contacts__time">
+                                    Пн-пт: 09:00-21:00
+                                </div>
+                                <button class="contacts__toggle">
+                                    <span class="_view1">Посмотреть на карте</span>
+                                    <span class="_view2">Посмотреть видео-тур</span>
+                                </button>
+                            </div>
+                            <div class="contacts__links">
+                                <a href="#" class="contacts__tel">
+                                    <span>+7 910 648-15-11</span>
+                                </a>
+                                <a href="#" class="contacts__email">
+                                    <span>info@refresh.ru</span>
+                                </a>
+                            </div>
+                            <div class="socials _type2 _flex">
+                                @@include('components/ui/_socials.html')
+                            </div>
+                            <div class="contacts__nav">
+                                <button class="m-btn m-btn-brown">
+                                    <span>Записаться на прием</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="contacts__content2">
+                            <div class="contacts__view1">
+                                <div class="service-info__video video">
+                                    <a href="videos/Countdown7.mp4" data-fancybox class="video__img">
+                                        <img srcset="img/video5_2x.jpg 2x" src="img/video5.jpg" loading="lazy"/>
+                                    </a>
+                                    <div class="video-nav">
+                                        <button class="video-nav__play">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M2 12V0L12 6L2 12Z" fill="#AD4E2C"/>
+                                            </svg>
+                                        </button>
+                                        <div class="video-nav__time text16 medium-text">
+                                            Видео-тур по салону
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts__view2">
+                                <div class="contacts-map map" data-cord1="56.873731" data-cord2="35.889079"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+    <script>
+        let maps = document.querySelectorAll("[data-cord1]")
+
+        ymaps.ready(init);
+
+
+
+
+        function init(map){
+            maps.forEach(map=> {
+                createMap(map)
+            })
+
+            function createMap(map){
+                let cord = [+map.dataset.cord1, +map.dataset.cord2]
+
+                let myMap = new ymaps.Map(map, {
+                    center: cord,
+                    zoom: 17,
+                    controls: []
+                });
+                myMap.behaviors.disable('scrollZoom');
+                myMap.controls.add('zoomControl');
+
+                let placeMark = new ymaps.Placemark(cord, {},
+                    {
+                        iconLayout: 'default#image',
+                        iconImageHref: "img/mark.svg",
+                        iconImageSize: [176, 89],
+                        iconImageOffset: [-88, -44.5]
+                    }
+                );
+                myMap.geoObjects.add(placeMark);
+            }
+        }
+    </script>
+</body>
+
+</html>

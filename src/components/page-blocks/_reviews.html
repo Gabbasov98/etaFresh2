@@ -1,0 +1,105 @@
+<div class="container">
+    <div class="h2 text-center">
+        Отзывы клиентов
+    </div>
+    <div class="reviews-sites">
+        @@include('../cards/_site-item.html',{
+        "img":"site",
+        "num":"4.9",
+        })
+        @@include('../cards/_site-item.html',{
+        "img":"site2",
+        "num":"4.9",
+        })
+        @@include('../cards/_site-item.html',{
+        "img":"site3",
+        "num":"5",
+        })
+    </div>
+
+    <div class="reviews-slider slider">
+        <div class="slider__wrap">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            @@include('../cards/_review-card-top.html',{
+                            "name":"Светлана",
+                            "date":"15.08.2023",
+                            })
+                            @@include('../cards/_review-card-content.html',{
+                            "text":"Посетила клинику впервые, по рекомендации подруги и не пожалела! Очень вежливый персонал, встретили, предложили каких только можно вкусностей во время ожидания атмосфера классная, вокруг красота, приятно находиться. Делала инъекции ботулотоксина в лоб и межбровку у косметолога Скибиной Елены Анатольевны.",
+                            })
+                            <div class="review-card__bottom">
+                                <div class="review-card__media">
+                                    <a href="img/review-img3.jpg" data-fancybox class="review-card__img">
+                                        <img srcset="img/review-img_2x.jpg 2x" src="img/review-img.jpg" loading="lazy"/>
+                                    </a>
+                                </div>
+                                <div class="review-card__media">
+                                    <a href="img/review-img2_2x.jpg" data-fancybox class="review-card__img">
+                                        <img srcset="img/review-img2_2x.jpg 2x" src="img/review-img2.jpg" loading="lazy"/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            @@include('../cards/_review-card-top.html',{
+                            "name":"Елизавета",
+                            "date":"04.03.2023",
+                            })
+                            @@include('../cards/_review-card-content.html',{
+                            "text":"Посетила клинику впервые, по рекомендации подруги и не пожалела! Очень вежливый персонал, встретили, предложили каких только можно вкусностей во время ожидания атмосфера классная, вокруг красота, приятно находиться. Делала инъекции ботулотоксина в лоб и межбровку у косметолога Скибиной Елены Анатольевны.",
+                            })
+                            <div class="review-card__bottom">
+                                <div class="review-card__doc">
+                                    <a href="img/doc_2x.jpg" data-fancybox class="review-card__img">
+                                        <img srcset="img/doc_2x.jpg 2x" src="img/doc.jpg" loading="lazy"/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            @@include('../cards/_review-card-top.html',{
+                            "name":"Пациент +7-999-91XXXXX",
+                            "date":"15.08.2023",
+                            })
+                            <div class="review-card__content">
+                                <p>
+                                    <b>Понравилось:</b> Очень хороший доктор. Без врачебного высокомерия. Терпеливая к вопросам, готовая тебя понять.
+                                </p>
+                                <p>
+                                    <b>Не понравилось:</b> Всё хорошо. Разве, что не всегда можно попасть на прием в вечернее время.
+                                    <br><a href="#">Читать полностью</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            @@include('../cards/_review-card-top.html',{
+                            "name":"Пациент +7-999-91XXXXX",
+                            "date":"15.08.2023",
+                            })
+                            <div class="review-card__content">
+                                <p>
+                                    <b>Понравилось:</b> Очень хороший доктор. Без врачебного высокомерия. Терпеливая к вопросам, готовая тебя понять.
+                                </p>
+                                <p>
+                                    <b>Не понравилось:</b> Всё хорошо. Разве, что не всегда можно попасть на прием в вечернее время.
+                                    <br><a href="#">Читать полностью</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        @@include('../ui/_swiper-nav.html')
+    </div>
+</div>

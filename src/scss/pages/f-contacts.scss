@@ -1,0 +1,225 @@
+.contacts{
+  &._map-view{
+    .contacts__toggle{
+      ._view1{
+        display: none;
+      }
+      ._view2{
+        display: unset;
+      }
+    }
+    .contacts__view1{
+      display: none;
+    }
+    .contacts__view2{
+      display: block;
+    }
+  }
+  &__inner{
+    padding: 4.06em 5.69em 3.94em;
+    border-radius: 0.75em;
+    background-color: $lightBg;
+    display: grid;
+    grid-template-columns: 29em calc(100% - 31em);
+    gap: 2em;
+  }
+  &__street{
+    font-size: 1.5em;
+    line-height: 133%;
+    font-weight: 500;
+  }
+  &__content{
+    padding: 1em 0;
+  }
+  &__info{
+    display: flex;
+    align-items: center;
+    margin-top: .875em;
+  }
+  &__time,
+  &__toggle{
+    font-size: 1em;
+    line-height: 150%;
+    font-weight: 500;
+  }
+  &__time{
+    color: $textSecondary;
+  }
+  &__toggle{
+    margin-left: 1.5em;
+    color: $primary;
+    &:hover{
+      color: $primaryHover;
+    }
+    ._view2{
+      display: none;
+    }
+  }
+  .socials{
+    margin-top: 2.31em;
+  }
+  &__nav{
+    margin-top: 3em;
+    display: flex;
+  }
+  &__links{
+    margin-top: 2.19em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__tel{
+    font-weight: 700;
+    span{
+      font-size: 2em;
+    }
+  }
+  &__email{
+    margin-top: .75em;
+    font-weight: 500;
+    color: $primary;
+    span{
+      font-size: 1.25em;
+      line-height: 160%;
+    }
+    &:hover{
+      color: $primaryHover;
+    }
+  }
+  &__view2{
+    display: none;
+  }
+  .service-info__video{
+    margin: 0;
+  }
+  @media screen and (min-width: 993px){
+    .video__img{
+      height: 27.5em;
+      img{
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.contacts-map{
+  height: 27.5em;
+  width: 100%;
+  border-radius: .75em;
+  overflow: hidden;
+  .ymaps-2-1-79-controls__control{
+    left: unset !important;
+    right: 1em !important;
+    top: 10.25em !important;
+    //transform: translateY(-50%);
+    width: 3em !important;
+    height: 7em !important;
+    box-shadow: 0px 1.7px 5px 0px rgba(0, 0, 0, 0.04), 0px 0.9px 2.7px 0px rgba(0, 0, 0, 0.03), 0px 0.5px 1.5px 0px rgba(0, 0, 0, 0.03), 0px 0.3px 0.8px 0px rgba(0, 0, 0, 0.02), 0px 0.1px 0.3px 0px rgba(0, 0, 0, 0.01), 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    border-radius: 6.25em;
+  }
+  .ymaps-2-1-79-zoom{
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0;
+  }
+  .ymaps-2-1-79-zoom__scale{
+    display: none;
+  }
+  .ymaps-2-1-79-zoom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ymaps-2-1-79-zoom__plus{
+    top: 50%;
+    transform: translateY(-100%);
+    background-image: url(../img/plus.svg);
+    border-radius: 6.25em 6.25em 0 0;
+  }
+  .ymaps-2-1-79-zoom__minus{
+    bottom: 50% ;
+    transform: translateY(100%);
+    background-image: url(../img/minus.svg);
+    border-radius: 0 0 6.25em 6.25em;
+  }
+  .ymaps-2-1-79-zoom__button{
+    width: 100%;
+    height: 50%;
+    background-color: transparent;
+    box-shadow: unset;
+    border: none;
+    border-radius: unset;
+    padding: 0;
+    @include bgImgSize(1.5em);
+  }
+  .ymaps-2-1-79-zoom__icon{
+    display: none;
+  }
+  .ymaps-2-1-79-copyright__content,
+  .ymaps-2-1-79-map-copyrights-promo{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .contacts{
+    .container{
+      padding: 0;
+    }
+    &__inner{
+      padding: 2.19em 1em 2em;
+      border-radius: 0;
+      grid-template-columns: 100%;
+    }
+    &__content{
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    &__street{
+      font-size: 1.125em;
+      line-height: 178%;
+    }
+    &__info{
+      margin-top: .75em;
+    }
+    &__toggle{
+      margin-left: 1em;
+    }
+    .socials{
+      margin-top: 1.31em;
+    }
+    &__nav{
+      margin-top: 1.5em;
+      justify-content: center;
+    }
+    &__links{
+      margin-top: 1.31em;
+      align-items: center;
+    }
+    &__tel{
+      span{
+        font-size: 1.625em;
+        line-height: 123%;
+      }
+    }
+    &__email{
+      margin-top: .13em;
+      span{
+        font-size: 1.125em;
+        line-height: 178%;
+      }
+    }
+  }
+
+  .contacts-map{
+    .ymaps-2-1-79-controls__control{
+      display: none;
+    }
+  }
+}

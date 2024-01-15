@@ -1,0 +1,33 @@
+<div class="work-card">
+    <div class="work-card__top">
+        @@if(video !== ""){
+        <a href="videos/Countdown7.mp4" data-fancybox="work" class="work-card__img">
+            <img srcset="img/@@img_2x.jpg 2x" src="img/@@img.jpg" loading="lazy"/>
+        </a>
+        <div class="video-nav">
+            <button class="video-nav__play">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 12V0L12 6L2 12Z" fill="#AD4E2C"/>
+                </svg>
+            </button>
+            <div class="video-nav__time text16 medium-text">
+                00:09
+            </div>
+        </div>
+        }
+        @@if(video == ""){
+        <a href="img/@@img_2x.jpg" data-fancybox="work" class="work-card__img">
+            <img srcset="img/@@img_2x.jpg 2x" src="img/@@img.jpg" loading="lazy"/>
+        </a>
+        }
+    </div>
+
+    <div class="work-card__content">
+        <div class="work-card__title text24 semi-bold-text dark-gray-text">
+            @@title
+        </div>
+        <div class="work-card__desc text18">
+            @@desc
+        </div>
+    </div>
+</div>

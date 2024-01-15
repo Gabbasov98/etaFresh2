@@ -1,0 +1,65 @@
+.conf{
+  &__inner{
+    width: 68.875em;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.text{
+  a{
+    color: $link;
+    &:hover{
+      color: $primaryHover;
+    }
+  }
+  hr{
+    display: block;
+    opacity: 0;
+    height: 2.19em;
+  }
+  h3{
+    font-size: 2em;
+    line-height: 125%;
+    font-weight: 700;
+    margin-bottom: .9em;
+  }
+  &._list2{
+    ul{
+      li{
+        padding-left: 2.25em;
+        &:before{
+          width: 1.25em;
+          height: 2px;
+          background: $primary;
+          top: .625em;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .text{
+    h3{
+      font-size: 1.625em;
+      line-height: 123%;
+      margin-bottom: .75em;
+    }
+    &._list2{
+      p,li{
+        font-size: 1em;
+        line-height: 150%;
+      }
+      ul{
+        li{
+          padding-left: 1.625em;
+          &:before{
+            width: 1em;
+          }
+        }
+      }
+    }
+  }
+}

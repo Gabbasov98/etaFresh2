@@ -1,0 +1,217 @@
+.fg {
+  position: relative;
+  margin: 0;
+  textarea,
+  input {
+    border-radius: .75em;
+    border: 1px solid $lightBg;
+    padding: 1.75em 1em .375em;
+    font-weight: 500;
+    height: 3.5em;
+    width: 100%;
+    font-size: 1em;
+    background-color: $lightBg;
+    color: $black;
+    &:hover{
+      background-color: #F5F1ED;
+      border-color: #F5F1ED;
+    }
+    &._filled,
+    &:focus{
+      &~label{
+        font-size: .75em;
+        top: .75em;
+        left: 1.33em;
+      }
+    }
+    &._required{
+      background-image: url(../img/round.svg);
+      background-size: .375em auto;
+      background-position: right 1em top 1.5625em;
+      background-repeat: no-repeat;
+    }
+    &._error{
+      border-color: $red;
+      &~.fg__text{
+        display: block;
+      }
+    }
+    &._success{
+      border-color: $green;
+    }
+  }
+  textarea{
+    height: 7em;
+    resize: none;
+  }
+  label{
+    font-size: 1em;
+    line-height: 150%;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    transition: all .2s;
+    pointer-events: none;
+    color: $textSecondary;
+  }
+  &__text{
+    font-size: .75em;
+    line-height: 133%;
+    color: $red;
+    padding: .41em 0 0 1.33em;
+    display: none;
+  }
+}
+
+.fg-dynamic{
+
+  select,
+  input{
+    padding-top: .75em;
+    min-height: 100%;
+
+  }
+  select{
+    &._filled{
+      &~.nice-select .current{
+        color: #3E3E3E;
+      }
+    }
+  }
+  .nice-select{
+    padding: 0 .625em;
+    height: 3.75em;
+    border: none;
+    border-bottom: 1px solid #CACACA;
+    .current{
+      padding-top: .875em;
+      font-size: 1.25em;
+      font-weight: 500;
+    }
+    &.open{
+      &~label{
+        font-size: .875em;
+        bottom: 2.53em;
+        left: .714em;
+        color: #3E3E3E;
+      }
+    }
+    .option{
+      color: #3E3E3E;
+    }
+    .disabled{
+      display: none;
+    }
+  }
+  &._error{
+    label{
+      color: $primary;
+    }
+  }
+}
+
+.file-input{
+  .label-container{
+    display: none;
+  }
+  .input-container{
+    padding: 1.75em;
+    height: 5em;
+    border-radius: 0.75em;
+    border: 1px dashed rgba(173, 78, 44, 0.30);
+    background-color: #fff;
+    @include  center;
+    position: relative;
+    margin-bottom: 1em;
+    &:after{
+      content: 'Добавить фото или видео';
+      font-size: 1em;
+      line-height: 150%;
+      color: $textSecondary;
+    }
+    input{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .input-visible{
+    display: none;
+  }
+  .image-preview{
+    display: grid;
+    grid-template-columns: repeat(3,calc(100% / 3 - 1em / 3));
+    gap: .5em;
+    background: transparent !important;
+    height: auto;
+    padding: 0;
+    &-item{
+      height: 2.5em;
+      background: $lightBg !important;
+      box-shadow: unset;
+      width: 100%;
+      margin: 0;
+      padding: 0 .75em;
+      border-radius: 0.75em;
+      display: flex;
+      align-items: center;
+      &:before{
+        content: attr(data-name);
+        width: calc(100% - 3em);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: .875em;
+        line-height: 130%;
+      }
+      &-clear{
+        background-image: url(../img/close2.svg) !important;
+        background-color: transparent !important;
+        @include bgImgSize(100%);
+        box-shadow: none;
+        width: 1em;
+        height: 1em;
+        left: unset;
+        right: .625em;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+        &:hover{
+          background-color: transparent !important;
+        }
+        &-icon{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .fg{
+    font-size: .875em;
+  }
+
+  .file-input{
+    .input-container{
+      margin-bottom: .5em;
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px){
+  .file-input{
+    .image-preview{
+      grid-template-columns: repeat(2,calc(50% - .25em));
+    }
+  }
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Услуги", "description":"", "keywords":"",})
+
+<body class="m-page">
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html',{
+            "main":"",
+            })
+        </header>
+        <main class="content">
+
+            <div class="service-main">
+                <div class="container">
+                    <div class="service-main__inner">
+                        <div class="service-main__content">
+                            <ul class="breadcrumbs">
+                                <li><a href="/">Главная</a></li>
+                                <li><a href="#">Услуги</a></li>
+                                <li><span>Инъекционная косметология</span></li>
+                            </ul>
+                            <h1 class="service-main__title text48 semi-bold-text">
+                                Контурная пластика
+                            </h1>
+                            <div class="service-main__desc dark-gray-text medium-text">
+                                <div class="text20 text16-tablet">
+                                    Устраняем мимические морщины на лице
+                                </div>
+                            </div>
+                            <div class="service-main__nav">
+                                <button class="m-btn m-btn-brown">
+                                    <span>Записаться</span>
+                                </button>
+                                <button class="m-btn m-btn-white">
+                                    <span>О процедуре</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="service-main__img">
+                            <img srcset="img/service-main_2x.jpg 2x" src="img/service-main.jpg"/>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="service-nav">
+                <div class="container">
+                    <div class="service-nav__inner">
+                        <a href="#" class="service-nav__link"><span>Цены</span></a>
+                        <a href="#" class="service-nav__link"><span>О процедуре</span></a>
+                        <a href="#" class="service-nav__link"><span>Специалисты</span></a>
+                        <a href="#" class="service-nav__link"><span>Работы</span></a>
+                        <a href="#" class="service-nav__link"><span>Отзывы</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-items">
+                <div class="container">
+                    <div class="services-grid">
+                        @@include('components/cards/_service-card.html',{
+                        "img":"service",
+                        "title":"Аппаратная  косметология",
+                        })
+                        @@include('components/cards/_service-card.html',{
+                        "img":"service-2",
+                        "title":"Инъекционная  косметология",
+                        })
+                        @@include('components/cards/_service-card.html',{
+                        "img":"service-3",
+                        "title":"Уход за телом",
+                        })
+                        @@include('components/cards/_service-card.html',{
+                        "img":"service-4",
+                        "title":"Уход за лицом",
+                        })
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-info">
+                <div class="container">
+                    <div class="service-text">
+                        <p>Контурная пластика в Студии омоложения «Рефреш» в Твери – это возможность сохранить красоту и молодость на долгие годы. Избавьтесь от морщин, уберите пигментные пятна или шрамы от акне и решите другие проблемы с нашей помощью. Чтобы устранить перечисленные недостатки внешности, не нужно идти к пластическому хирургу. Достаточно довериться нашим специалистам и воспользоваться контурной пластикой.</p>
+                        <p>Процедура относится к безоперационным методам коррекции. Заключается в том, что под кожу путем инъекций вводятся филлеры. Они способны уменьшить мимические морщины, сгладить линии экспрессии на лице, скорректировать пропорции и т.п. Контурная пластика подходит для пациентов любого пола и возраста.</p>
+                    </div>
+
+                    <div class="service-info__video video">
+                        <a href="videos/Countdown7.mp4" data-fancybox class="video__img">
+                            <img srcset="img/video_2x.jpg 2x" src="img/video.jpg" loading="lazy"/>
+                        </a>
+                        <div class="video-nav">
+                            <button class="video-nav__play">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 12V0L12 6L2 12Z" fill="#AD4E2C"/>
+                                </svg>
+                            </button>
+                            <div class="video-nav__time text16 medium-text">
+                                Контурная пластика в студии «Рефреш»
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-prices">
+                <div class="container">
+                    <div class="service-prices__inner">
+                        <div class="h2 text-center">
+                            Цены
+                        </div>
+                        <div class="service-prices__desc">
+                            <div class="text24 text16-tablet medium-text">
+                                Лазерная эпиляция на Александритовом лазере — Candela
+                            </div>
+                        </div>
+                        <div class="prices">
+                            @@include('components/cards/_price-item.html',{
+                            "title":"Лицо полностью",
+                            "price":"2 200 ₽",
+                            "price2":"",
+                            })
+                            @@include('components/cards/_price-item.html',{
+                            "title":"Лоб и щеки",
+                            "price":"1 000 ₽",
+                            "price2":"",
+                            })
+                            @@include('components/cards/_price-item.html',{
+                            "title":"Виски или бакенбарды, или подбородок",
+                            "price":"700 ₽",
+                            "price2":"",
+                            })
+                            @@include('components/cards/_price-item.html',{
+                            "title":"Нос",
+                            "price":"500 ₽",
+                            "price2":"",
+                            })
+                            @@include('components/cards/_price-item.html',{
+                            "title":"Шея (передняя или задняя поверхность)",
+                            "price":"1 000 ₽",
+                            "price2":"",
+                            })
+                            @@include('components/cards/_price-item.html',{
+                            "title":"Малая зона верхняя губа",
+                            "price":"700 ₽",
+                            "price2":"",
+                            })
+                            @@include('components/cards/_price-item.html',{
+                            "title":"Уши",
+                            "price":"700 ₽",
+                            "price2":"",
+                            })
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="about-service">
+                <div class="container">
+                    <div class="h2 text-center">
+                        О процедуре
+                    </div>
+                    <div class="about-service__inner _tabs-parent">
+                        <div class="tabs__wrap">
+                            <div class="tabs">
+                                <div class="tab _tab _active" data-tab="_tab1">
+                                    <span>Показания</span>
+                                </div>
+                                <div class="tab _tab" data-tab="_tab2">
+                                    <span>Преимущества</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content _tab1 _active">
+                            <div class="text">
+                                <p>Контурная пластика показана к проведению при следующих проблемах</p>
+                                <ul>
+                                    <li>выраженные носогубные или носослезные складки;</li>
+                                    <li>заломы в межбровье и периоральной области;</li>
+                                    <li>асимметрия лица;</li>
+                                    <li>мимические или возрастные морщины;</li>
+                                    <li>вертикальные и продольные морщины на шее или в области декольте;</li>
+                                    <li>брыли;</li>
+                                    <li>второй подбородок;</li>
+                                    <li>темные круги и отечность в области под глазами;</li>
+                                    <li>слабо очерченные скулы;</li>
+                                    <li>малый объем губ и многое другое.</li>
+                                </ul>
+                                <p>Этот метод хорошо сочетается с другими процедурами и позволяет подходить к решению любой проблемы комплексно. Например, после ввода филлеров для коррекции морщин можно провести курс биоревитализации или мезотерапии, чтобы усилить эффект, за счет стимуляции естественной регенерации тканей и омоложения.</p>
+                            </div>
+                        </div>
+                        <div class="tab-content _tab2">
+                            <div class="text">
+                                <p>Мы работаем только проверенными филлерами на основе гиалуроновой кислоты, включая Belotero Intense, Belotero VOLUME, а также минеральным препаратом Radiesse на основе гидроксиапатита кальция. Вид филлера подбирается индивидуально с учетом пожеланий и особенностей пациента.</p>
+                                <p>Студия «РЕФРЕШ» за здоровое и безопасное омоложение лица и тела. Каждому клиенту гарантировано использование индивидуального одноразового набора расходников. Мы всегда готовы показать сертификаты качества используемых препаратов, при необходимости зона обработки обезболивается.</p>
+                                <p>Записывайтесь на первичную консультацию и наши специалисты смогут найти решение любой проблемы. Получить более подробную информацию, подобрать удобное время приема, можно позвонив по указанному на сайте номеру телефона. Обращение в «РЕФРЕШ» – это лучшее решение для тех, кто стремится сохранить или вернуть свою молодость.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="workers">
+                @@include('components/page-blocks/_workers.html')
+            </div>
+
+            <div class="works">
+                @@include('components/page-blocks/_works.html',{
+                "title":"Примеры работ",
+                })
+            </div>
+
+            <div class="advantages">
+                @@include('components/page-blocks/_advantages.html')
+            </div>
+
+            <div class="reviews">
+                @@include('components/page-blocks/_reviews.html')
+            </div>
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>
